@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/github-dark.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print">
+
+    <title>Generator-lennon-grunt-react by ah-kevin</title>
+  </head>
+
+  <body>
+
+    <header>
+      <div class="container">
+        <h1>Generator-lennon-grunt-react</h1>
+        <h2>grunt-react</h2>
+
+        <section id="downloads">
+          <a href="https://github.com/ah-kevin/generator-lennon-grunt-react/zipball/master" class="btn">Download as .zip</a>
+          <a href="https://github.com/ah-kevin/generator-lennon-grunt-react/tarball/master" class="btn">Download as .tar.gz</a>
+          <a href="https://github.com/ah-kevin/generator-lennon-grunt-react" class="btn btn-github"><span class="icon"></span>View on GitHub</a>
+        </section>
+      </div>
+    </header>
+
+    <div class="container">
+      <section id="main_content">
+        <h1>
+<a id="web-app-generator-" class="anchor" href="#web-app-generator-" aria-hidden="true"><span class="octicon octicon-link"></span></a>Web app generator <a href="http://travis-ci.org/yeoman/generator-webapp"><img src="https://secure.travis-ci.org/yeoman/generator-webapp.svg?branch=master" alt="Build Status"></a>
+</h1>
+
+<p><a href="http://yeoman.io">Yeoman</a> generator that scaffolds out a front-end web app.</p>
+
+<p><img src="http://i.imgur.com/uKTT2Hj.png" alt=""></p>
+
+<h2>
+<a id="features" class="anchor" href="#features" aria-hidden="true"><span class="octicon octicon-link"></span></a>Features</h2>
+
+<ul>
+<li>CSS Autoprefixing</li>
+<li>Built-in preview server with LiveReload</li>
+<li>Automagically compile CoffeeScript &amp; Sass</li>
+<li>Automagically lint your scripts</li>
+<li>Automagically wire up your Bower components with <a href="#third-party-dependencies">grunt-wiredep</a>.</li>
+<li>Awesome Image Optimization (via OptiPNG, pngquant, jpegtran and gifsicle)</li>
+<li>Mocha Unit Testing with PhantomJS</li>
+<li>Bootstrap for Sass (Optional)</li>
+<li>Leaner Modernizr builds (Optional)</li>
+</ul>
+
+<p>For more information on what <code>generator-webapp</code> can do for you, take a look at the <a href="https://github.com/yeoman/generator-webapp/blob/master/app/templates/_package.json">Grunt tasks</a> used in our <code>package.json</code>.</p>
+
+<h2>
+<a id="getting-started" class="anchor" href="#getting-started" aria-hidden="true"><span class="octicon octicon-link"></span></a>Getting Started</h2>
+
+<ul>
+<li>Install: <code>npm install -g generator-webapp</code>
+</li>
+<li>Run: <code>yo webapp</code>
+</li>
+<li>Run <code>grunt</code> for building and <code>grunt serve</code> for preview<a href="#grunt-serve-note">*</a>. <code>--allow-remote</code> option for remote access.</li>
+</ul>
+
+<h4>
+<a id="third-party-dependencies" class="anchor" href="#third-party-dependencies" aria-hidden="true"><span class="octicon octicon-link"></span></a>Third-Party Dependencies</h4>
+
+<p><em>(HTML/CSS/JS/Images/etc)</em></p>
+
+<p>Third-party dependencies are managed with <a href="https://github.com/stephenplusplus/grunt-wiredep">grunt-wiredep</a>. Add new dependencies using <strong>Bower</strong> and then run the <strong>Grunt</strong> task to load them:</p>
+
+<div class="highlight highlight-sh"><pre>$ bower install --save jquery
+$ grunt wiredep</pre></div>
+
+<p>This works if the package author has followed the <a href="https://github.com/bower/bower.json-spec">Bower spec</a>. If the files are not automatically added to your source code, check with the package's repo for support and/or file an issue with them to have it updated.</p>
+
+<p>To manually add dependencies, <code>bower install --save depName</code> to get the files, then add a <code>script</code> or <code>style</code> tag to your <code>index.html</code> or another appropriate place.</p>
+
+<p>The components are installed in the root of the project at <code>/bower_components</code>. To reference them from index.html, use <code>src="bower_components"</code> or <code>src="/bower_components"</code>. Treat the <code>bower_components</code> directory as if it was a sibling to <code>index.html</code>.</p>
+
+<p><em>Testing Note</em>: a project checked into source control and later checked out needs to have <code>bower install</code> run from the <code>test</code> folder as well as from the project root.</p>
+
+<h4>
+<a id="grunt-serve-note" class="anchor" href="#grunt-serve-note" aria-hidden="true"><span class="octicon octicon-link"></span></a>Grunt Serve Note</h4>
+
+<p>Note: <code>grunt server</code> was used for previewing in earlier versions of the project, and has since been deprecated in favor of <code>grunt serve</code>.</p>
+
+<h2>
+<a id="docs" class="anchor" href="#docs" aria-hidden="true"><span class="octicon octicon-link"></span></a>Docs</h2>
+
+<p>We have <a href="docs/recipes">recipes</a> for integrating other popular technologies like Compass.</p>
+
+<h2>
+<a id="options" class="anchor" href="#options" aria-hidden="true"><span class="octicon octicon-link"></span></a>Options</h2>
+
+<ul>
+<li>
+<p><code>--skip-install</code></p>
+
+<p>Skips the automatic execution of <code>bower</code> and <code>npm</code> after scaffolding has finished.</p>
+</li>
+<li>
+<p><code>--test-framework=&lt;framework&gt;</code></p>
+
+<p>Defaults to <code>mocha</code>. Can be switched for another supported testing framework like <code>jasmine</code>.</p>
+</li>
+<li>
+<p><code>--coffee</code></p>
+
+<p>Add support for <a href="http://coffeescript.org/">CoffeeScript</a>.</p>
+</li>
+</ul>
+
+<h2>
+<a id="contribute" class="anchor" href="#contribute" aria-hidden="true"><span class="octicon octicon-link"></span></a>Contribute</h2>
+
+<p>See the <a href="https://github.com/yeoman/yeoman/blob/master/contributing.md">contributing docs</a>.</p>
+
+<p>Note: We are regularly asked whether we can add or take away features. If a change is good enough to have a positive impact on all users, we are happy to consider it.</p>
+
+<p>If not, <code>generator-webapp</code> is fork-friendly and you can always maintain a custom version which you <code>npm install &amp;&amp; npm link</code> to continue using via <code>yo webapp</code> or a name of your choosing.</p>
+
+<h2>
+<a id="license" class="anchor" href="#license" aria-hidden="true"><span class="octicon octicon-link"></span></a>License</h2>
+
+<p><a href="http://opensource.org/licenses/bsd-license.php">BSD license</a></p>
+      </section>
+    </div>
+
+    
+  </body>
+</html>
