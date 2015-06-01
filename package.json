@@ -1,10 +1,10 @@
 {
-  "name": "generator-lennon-grunt",
+  "name": "generator-lennon-grunt-react",
   "version": "0.1.0",
-  "description": "Yeoman generator lennon grunt",
+  "description": "Yeoman generator lennon grunt react",
   "license": "MIT",
   "main": "app/index.js",
-  "repository": "lennon/generator-lennon-grunt",
+  "repository": "lennon/generator-lennon-grunt-react",
   "author": {
     "name": "lennon",
     "email": "kbjwdh@gmail.com",
